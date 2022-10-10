@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>Kruti's Page</title>
+    </head>
+    <!-- This is Body Tag -->
+    <body>
+
+        
+        <form> <!-- action="/action_page.php"-->
+
+            <!-- For screen readers: Always add the <label> tag for best accessibility practices!-->
+        
+            <!-- 
+            The <input type="hidden"> defines a hidden input field.
+            A hidden field let web developers include data that cannot be seen or modified by users when a form is submitted.
+            A hidden field often stores what database record that needs to be updated when the form is submitted.
+            Note: While the value is not displayed to the user in the page's content, it is visible (and can be edited) using any browser's developer tools or "View Source" functionality. Do not use hidden inputs as a form of security!
+            -->
+            <input type="hidden" id="custId" name="custId" value="3487">
+        
+            <br><br>
+        
+            <!--
+                The <input type="search"> defines a text field for entering a search string.
+                Note: Remember to set a name for the search field, otherwise nothing will be submitted. The most common name for search inputs is q.
+            -->
+            <label for="gsearch">Search Google:</label>
+            <input type="search" id="gsearch" name="gsearch">
+        
+            <br><br>
+        
+            <!--
+                The <input type="text"> defines a single-line text field.
+                The default width of the text field is 20 characters.
+            -->
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" value="Kruti" required>
+        
+            <br><br>
+
+            <label for="mname">Middle name:</label>
+            <input type="text" id="mname" name="mname" readonly>
+        
+            <br><br>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lname" placeholder="enter last name">
+
+            <br><br>
+
+            <label for="description">Enter Description</label>
+            <textarea id="desc" name="desc"></textarea>
+        
+            <br><br>
+        
+            <!--
+                The <input type="email"> defines a field for an e-mail address.
+                The input value is automatically validated to ensure it is a properly formatted e-mail address.
+                To define an e-mail field that allows multiple e-mail addresses, add the "multiple" attribute.
+            
+                The required attribute is a boolean attribute. When present, it specifies that an input field must be filled out before submitting the form. Note: The required attribute works with the following input types: text, search, url, tel, email, password, date pickers, number, checkbox, radio, and file.
+        
+                The placeholder attribute specifies a short hint that describes the expected value of an input field (e.g. a sample value or a short description of the expected format).The short hint is displayed in the input field before the user enters a value. Note: The placeholder attribute works with the following input types: text, search, url, tel, email, and password.
+            -->
+            <label for="emailID">Email Address</label>
+            <input type="email" name="emailID" required placeholder="ex@example.com">
+        
+            <br><br>
+        
+    
+
+            <!--
+                The <input type="password"> defines a password field (characters are masked).
+                Note: Any forms involving sensitive information like passwords should be served over HTTPS.
+            -->
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd">
+        
+            <br><br>
+        
+            <!--
+                The <input type="tel"> defines a field for entering a telephone number.
+                Note: Browsers that do not support "tel" fall back to being a standard "text" input.
+                The pattern attribute specifies a regular expression that the <input> element's value is checked against on form submission. Note: The pattern attribute works with the following input types: text, date, search, url, tel, email, and password.
+            -->
+            <label for="phone">Enter your phone number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+        
+            <br><br>
+        
+            <!--
+                The <input type="color"> defines a color picker.
+                The default value is #000000 (black). The value must be in seven-character hexadecimal notation.
+            -->
+            <label for="favcolor">Select your favorite color:</label>
+            <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+        
+            <br><br>
+        
+            <!--
+                The <input type="month"> defines a month and year control.
+                The format is "YYYY-MM".
+            -->
+            <label for="bdaymonth">Birthday (month and year):</label>
+            <input type="month" id="bdaymonth" name="bdaymonth">
+        
+            <br><br>
+            
+            <!--
+                The <input type="date"> defines a date picker.
+                The resulting value includes the year, month, and day.
+            -->
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday">
+        
+            <br><br>
+        
+            <!--
+                The <input type="datetime-local"> defines a date picker.
+                The resulting value includes the year, month, day, and time.
+            -->
+            <label for="birthdaytime">Birthday (date and time):</label>
+            <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+
+
+        
+            <br><br>
+        
+            <!--
+                The <input type="time"> defines a control for entering a time (no time zone).
+            -->
+            <label for="appt">Select a time:</label>
+            <input type="time" id="appt" name="appt">
+        
+            <br><br>
+        
+            <!--
+                The <input type="range"> defines a control for entering a number whose exact value is not important (like a slider control).
+                Default range is 0 to 100. However, you can set restrictions on what numbers are accepted with the attributes below.
+                max - specifies the maximum value allowed
+                min - specifies the minimum value allowed
+                step - specifies the legal number intervals
+                value - Specifies the default value
+            -->
+            <label for="points">Points (between 0 and 10):</label>
+            <input type="range" id="points" name="points" min="10" max="100">
+        
+            <br><br>  
+        
+            <!--
+                The <input type="number"> defines a field for entering a number.
+                Use the following attributes to specify restrictions:
+                max - specifies the maximum value allowed
+                min - specifies the minimum value allowed
+                step - specifies the legal number intervals
+                value - Specifies the default value
+            -->
+            <label for="quantity">Quantity (between 1 and 5):</label>
+            <input type="number" id="quantity" name="quantity" min="100" max="105">
+        
+            <br><br>
+        
+            <!--
+                The <input type="checkbox"> defines a checkbox.
+                The checkbox is shown as a square box that is ticked (checked) when activated.
+                Checkboxes are used to let a user select one or more options of a limited number of choices.
+            -->
+            <label>Choose Vehicle</label><br>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="MotorBike">
+            <label for="vehicle1"> Motor Bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> Car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Cycle">
+            <label for="vehicle3"> Cycle</label><br>
+        
+            <br><br>
+        
+            <!--
+                Radio buttons let a user select only one of a limited number of choices:
+                The <input type="radio"> defines a radio button.
+        
+                Radio buttons are normally presented in radio groups (a collection of radio buttons describing a set of related options). Only one radio button in a group can be selected at the same time.
+        
+                Note: The radio group must have share the same name (the value of the name attribute) to be treated as a group. Once the radio group is created, selecting any radio button in that group automatically deselects any other selected radio button in the same group. You can have as many radio groups on a page as you want, as long as each group has its own name.
+        
+                Note: The value attribute defines the unique value associated with each radio button. The value is not shown to the user, but is the value that is sent to the server on "submit" to identify which radio button that was selected.
+            -->
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript">JavaScript</label><br>
+            <input type="radio" id="React" name="fav_language" value="React">
+            <label for="react">React</label><br>
+            <input type="radio" id="angular" name="fav_language" value="angular">
+            <label for="angular">angular</label>
+        
+            <br><br>
+        
+            <!--
+                The <input type="image"> defines an image as a submit button.
+                The path to the image is specified in the src attribute.
+            -->
+            <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+        
+            <br><br>
+        
+            <!--
+                The <input type="file"> defines a file-select field and a "Browse" button for file uploads.To define a file-select field that allows multiple files to be selected, add the multiple attribute.
+            -->
+            <label for="myfile">Upload File:</label>
+            <input type="file" id="myfile" name="myfile">
+        
+            <br><br>
+        
+            <!--
+                The <input type="url"> defines a field for entering a URL.
+                The input value is automatically validated before the form can be submitted.
+            -->
+            <label for="homepage">Add your homepage:</label>
+            <input type="url" id="homepage" name="homepage">
+        
+            <br><br>
+        
+            <!-- The <input type="button"> defines a clickable button (mostly used with a JavaScript to activate a script).-->
+            <input type="button" value="Validate Here">
+        
+            <br><br>
+        
+            <!--The <input type="reset"> defines a reset button which resets all form values to its initial values.-->
+            <input type="reset">
+        
+            <br><br>
+        
+            <!--
+                The <input type="submit"> defines a submit button which submits all form values to a form-handler.
+                The form-handler is typically a server page with a script for processing the input data.
+                The form-handler is specified in the form's action attribute.
+            -->
+            <input type="submit">
+        
+        
+        <!-- Please visit for more Tags: https://www.w3schools.com/tags/att_value.asp -->
+        </form>
+
+    </body>
+</html>
