@@ -3,6 +3,7 @@
     <head>
         <title>Kruti's Page</title>
     </head>
+
     <!-- This is Body Tag -->
     <body>
 
@@ -11,46 +12,25 @@
 
             <!-- For screen readers: Always add the <label> tag for best accessibility practices!-->
         
-            <!-- 
-            The <input type="hidden"> defines a hidden input field.
-            A hidden field let web developers include data that cannot be seen or modified by users when a form is submitted.
-            A hidden field often stores what database record that needs to be updated when the form is submitted.
-            Note: While the value is not displayed to the user in the page's content, it is visible (and can be edited) using any browser's developer tools or "View Source" functionality. Do not use hidden inputs as a form of security!
-            -->
-            <input type="hidden" id="custId" name="custId" value="3487">
-        
-            <br><br>
-        
-            <!--
-                The <input type="search"> defines a text field for entering a search string.
-                Note: Remember to set a name for the search field, otherwise nothing will be submitted. The most common name for search inputs is q.
-            -->
-            <label for="gsearch">Search Google:</label>
-            <input type="search" id="gsearch" name="gsearch">
-        
-            <br><br>
+            
         
             <!--
                 The <input type="text"> defines a single-line text field.
                 The default width of the text field is 20 characters.
             -->
-            <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname" value="Kruti" required>
-        
-            <br><br>
 
-            <label for="mname">Middle name:</label>
-            <input type="text" id="mname" name="mname" readonly>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" required>
         
             <br><br>
 
             <label for="lastName">Last Name:</label>
-            <input type="text" id="lname" placeholder="enter last name">
+            <input type="text" id="lname" name="lname" required>
 
             <br><br>
 
             <label for="description">Enter Description</label>
-            <textarea id="desc" name="desc"></textarea>
+            <textarea id="desc" name="desc" placeholder="Please add details here..."></textarea>
         
             <br><br>
         
@@ -68,8 +48,6 @@
         
             <br><br>
         
-    
-
             <!--
                 The <input type="password"> defines a password field (characters are masked).
                 Note: Any forms involving sensitive information like passwords should be served over HTTPS.
@@ -84,7 +62,7 @@
                 Note: Browsers that do not support "tel" fall back to being a standard "text" input.
                 The pattern attribute specifies a regular expression that the <input> element's value is checked against on form submission. Note: The pattern attribute works with the following input types: text, date, search, url, tel, email, and password.
             -->
-            <label for="phone">Enter your phone number:</label>
+            <label for="phone">Phone number:</label>
             <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
         
             <br><br>
@@ -111,7 +89,7 @@
                 The <input type="date"> defines a date picker.
                 The resulting value includes the year, month, and day.
             -->
-            <label for="birthday">Birthday:</label>
+            <label for="birthday">Appointment Date:</label>
             <input type="date" id="birthday" name="birthday">
         
             <br><br>
@@ -221,6 +199,25 @@
             -->
             <label for="homepage">Add your homepage:</label>
             <input type="url" id="homepage" name="homepage">
+        
+            <br><br>
+
+            <!-- 
+            The <input type="hidden"> defines a hidden input field.
+            A hidden field let web developers include data that cannot be seen or modified by users when a form is submitted.
+            A hidden field often stores what database record that needs to be updated when the form is submitted.
+            Note: While the value is not displayed to the user in the page's content, it is visible (and can be edited) using any browser's developer tools or "View Source" functionality. Do not use hidden inputs as a form of security!
+            -->
+            <input type="hidden" id="custId" name="custId" value="3487">
+        
+            <br><br>
+        
+            <!--
+                The <input type="search"> defines a text field for entering a search string.
+                Note: Remember to set a name for the search field, otherwise nothing will be submitted. The most common name for search inputs is q.
+            -->
+            <label for="gsearch">Search Google:</label>
+            <input type="search" id="gsearch" name="gsearch">
         
             <br><br>
         
